@@ -6,6 +6,7 @@
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <title>NavBar</title>
     <style>
@@ -14,12 +15,23 @@
         }
         html{
             font-family: 'Oxygen','sans-serif';
+            font-family: 'Lato',sans-serif;
         }
         .navbar{
             background-color:rgb(28, 149, 197);
         }
         .navbar div{
             display: none;
+        }
+       .navbar .headed-wrapped{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .navbar .logo{
+            width: 60px;
+            height: 60px;
         }
         .navbar .link {
             display: block;
@@ -35,9 +47,16 @@
             background: white;
         }
         .navbar .toggle,
+        .navbar .logo,
         .navbar .brand{
+            /* display: inline-block; */
+        }
+
+        .navbar .toggle{
             display: inline-block;
         }
+      
+        
         .navbar .brand {
             width: 10em;
             text-align: center;
@@ -64,7 +83,7 @@
             .navbar .right{
                 display: flex;
                 flex:1;
-            }
+            }   
             .navbar .link{
                 width: auto;
             }
@@ -80,11 +99,21 @@
                 background: #223047;
                 color:white;
             }
+           
             .navbar .brand{
                 text-align: left;
             }
+
             .navbar.active div{
                 display: block;
+                padding: 1em;
+            }
+            .navbar .headed-wrapped{
+                display: block;
+                text-align: center;
+                /* display: flex;
+                flex-flow: column;
+                align-items: center; */
             }
         }
     </style>
@@ -94,7 +123,11 @@
         <a href="#" class="toggle" id="navHamburger">
             <i class="fa-solid fa-bars"></i>
         </a>
-        <a href="#" class="brand">Ortodoncia Susana</a>
+        <div class="headed-wrapped">
+            <img class="logo" src="images/logo/cropped-SierraLogo.jpg" alt="logo">
+            <a href="#" class="brand">Ortodoncia Susana Tlf.944331715</a>
+        </div>
+       
         <div class="left">
             <a href="#" class="link">About</a>
             <a href="#" class="link">Treatmens</a>
