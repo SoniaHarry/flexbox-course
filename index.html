@@ -30,15 +30,16 @@
         .navbar div{
             display: none;
         }
-       .navbar .headed-wrapped{
+       .navbar>.headed-wrapped{
             display: flex;
             align-items: center;
             text-align: center;
             /* font-size: 1.2em; */
         }
-        .navbar .logo{
+        .navbar>.headed-wrapped>.logo{
             width: 100px;
             height: 100px;
+            padding: 0px;
         }
         .navbar .link {
             display: block;
@@ -53,10 +54,10 @@
             color:#6997e1;
             background: white;
         }
-        .navbar .toggle{
+        .navbar>.toggle{
             display: inline-block;
         }
-        .navbar .brand {
+        .navbar>.headed-wrapped>.brand {
             width: 10em;
             text-align: center;
             padding: 1em;
@@ -65,7 +66,7 @@
         .navbar a{
             text-decoration: none;
         }
-        .navbar .toggle {
+        .navbar>.toggle {
             padding: 1em;
             color: black;
         }
@@ -77,18 +78,18 @@
             .navbar .div{
                 display: flex;
             }
-            .navbar .left,
-            .navbar .right{
+            .navbar>.left,
+            .navbar>.right{
                 display: flex;
                 flex:1;
             }   
             .navbar .link{
                 width: auto;
             }
-            .navbar .right{
+            .navbar>.right{
                 justify-content: flex-end;
             }
-            .navbar .toggle{
+            .navbar>.toggle{
                 display: none;
             }
         }
@@ -98,7 +99,10 @@
                 color:white;
             }
            
-            .navbar .brand{
+            .navbar>.headed-wrapped>.logo{
+                padding: 10px
+            }
+            .navbar>.headed-wrapped>.brand{
                 /* text-align: left; */
                 display: none;
             }
@@ -107,7 +111,7 @@
                 display: block;
                 padding: 1em;
             }
-            .navbar .headed-wrapped{
+            .navbar>.headed-wrapped{
                 display: block;
                 text-align: center;
             }
